@@ -20,14 +20,14 @@
     <div class="controls">
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
-    <%= error_span(@image[:name]) %>
+    <%= f.error_span(:name) %>
   </div>
   <div class="control-group">
     <%= f.label :picture, :class => 'control-label' %>
     <div class="controls">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
     </div>
-    <%= error_span(@image[:picture]) %>
+    <%= f.error_span(:picture) %>
   </div>
 
 
@@ -36,12 +36,12 @@
             images_path, :class => 'btn btn-default' %>
 
 <% end %>
-<script type="text/javascript">
 
-$('#image_picture').bind('change', function() {
+<script type="text/javascript">
+  $('#image_picture').bind('change', function() {
     var size_in_megabytes = this.files[0].size/1024/1024;
-      if (size_in_megabytes > 5) {
-    alert('Maximum file size is 5MB.');
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB.');
     }
-});
+  });
 </script>
