@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'devise', '~> 4.4.0'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+gem 'stripe'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
